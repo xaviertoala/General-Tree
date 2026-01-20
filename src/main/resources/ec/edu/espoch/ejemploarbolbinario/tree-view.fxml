@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane prefHeight="700.0" prefWidth="1024.0" style="-fx-background-color: #f8f9fa;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ec.edu.espoch.controller.TreeController">
+   <top>
+      <VBox alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" spacing="15.0" style="-fx-padding: 20;">
+         <children>
+            <Label prefHeight="40.0" prefWidth="1019.0" text="Árbol General" textFill="#363232">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" spacing="15.0">
+               <children>
+                  <TextField fx:id="txtValor" prefHeight="45.0" prefWidth="200.0" promptText="Ingrese valor entero" style="-fx-font-size: 16; -fx-background-radius: 8;" />
+                  <Button onAction="#onAgregar" prefHeight="45.0" prefWidth="120.0" style="-fx-background-color: #27ae60; -fx-text-fill: white; -fx-font-weight: bold; -fx-cursor: hand; -fx-background-radius: 8; -fx-font-size: 14;" text="Agregar" />
+                  <Button onAction="#onEliminar" prefHeight="45.0" prefWidth="120.0" style="-fx-background-color: #e74c3c; -fx-text-fill: white; -fx-font-weight: bold; -fx-cursor: hand; -fx-background-radius: 8; -fx-font-size: 14;" text="Eliminar" />
+                  <Button onAction="#onLimpiar" prefHeight="45.0" prefWidth="120.0" style="-fx-background-color: #f39c12; -fx-text-fill: white; -fx-font-weight: bold; -fx-cursor: hand; -fx-background-radius: 8; -fx-font-size: 14;" text="Limpiar" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </top>
+   <center>
+      <ScrollPane fx:id="scrollPane" fitToHeight="true" fitToWidth="true" style="-fx-background-color: transparent; -fx-background: #f8f9fa;">
+         <content>
+            <StackPane fx:id="container" style="-fx-background-color: #f8f9fa;">
+               <children>
+                  <Canvas fx:id="canvas" />
+               </children>
+            </StackPane>
+         </content>
+      </ScrollPane>
+   </center>
+</BorderPane>
